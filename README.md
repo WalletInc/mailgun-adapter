@@ -1,8 +1,8 @@
-# parse-server-mailgun-adapter-template
+#mailgun-adapter
 Used to send Parse Server password reset and email verification emails though Mailgun
 
-
 ## How to use
+
 ```
 var fs = require('fs'); //required if loading html from file!
 
@@ -43,7 +43,7 @@ var server = ParseServer({
 
 Require `fs` and provide `verificationBodyHTML` or `passwordResetBodyHTML` as a `string` of `fs` object. The email will be sent out as HTML. You still need to include the default text as a fallback.
 
-## Variables 
+## Variables
 
 Customize the e-mail sent to your users when they reset their password or when we verify their email address. The following variables will be automatically filled in with their appropriate values:
 

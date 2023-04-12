@@ -54,6 +54,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.verificationSubject, options),
         text: fillVariables(mailgunOptions.verificationBody, options),
@@ -86,6 +87,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.verificationSubject, options),
         text: fillVariables(mailgunOptions.verificationBody, options)
@@ -110,6 +112,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.passwordResetSubject, options),
         text: fillVariables(mailgunOptions.passwordResetBody, options),
@@ -142,6 +145,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.passwordResetSubject, options),
         text: fillVariables(mailgunOptions.passwordResetBody, options)
@@ -166,6 +170,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: mail.to,
         subject: mail.subject,
         text: mail.text,
@@ -198,6 +203,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        sender: mailgunOptions.fromAddress,
         to: mail.to,
         subject: mail.subject,
         text: mail.text
