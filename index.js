@@ -61,23 +61,26 @@ var SimpleMailgunAdapter = mailgunOptions => {
         html: fillVariables(mailgunOptions.verificationBodyHTML, options)
       });
       return new Promise((resolve, reject) => {
-      	mail.build((mailBuildError, message) => {
-          if(mailBuildError){
-            return reject(mailBuildError);
-          }
-          var dataToSend = {
-            to: getRecipient(options.user),
-            message: message.toString('ascii')
-          };
-          mailgun.messages().sendMime(dataToSend, (err, body) => {
-            if (err) {
-              return reject(err);
+        try {
+          mail.build((mailBuildError, message) => {
+            if(mailBuildError){
+              return reject(mailBuildError);
             }
-            resolve(body);
-          });
-        }).catch(err => {
-          reject(err);
-        });
+            var dataToSend = {
+              to: getRecipient(options.user),
+              message: message.toString('ascii')
+            };
+            mailgun.messages().sendMime(dataToSend, (err, body) => {
+              if (err) {
+                return reject(err);
+              }
+              resolve(body);
+            });
+          })
+        }
+        catch (err) {
+            reject(err);
+        }
       });
     }else{
       var data = {
@@ -119,23 +122,26 @@ var SimpleMailgunAdapter = mailgunOptions => {
         html: fillVariables(mailgunOptions.passwordResetBodyHTML, options)
       });
       return new Promise((resolve, reject) => {
-      	mail.build((mailBuildError, message) => {
-          if(mailBuildError){
-            return reject(mailBuildError);
-          }
-          var dataToSend = {
-            to: getRecipient(options.user),
-            message: message.toString('ascii')
-          };
-          mailgun.messages().sendMime(dataToSend, (err, body) => {
-            if (err) {
-              return reject(err);
+        try {
+          mail.build((mailBuildError, message) => {
+            if(mailBuildError){
+              return reject(mailBuildError);
             }
-            resolve(body);
-          });
-        }).catch(err => {
-          reject(err);
-        });
+            var dataToSend = {
+              to: getRecipient(options.user),
+              message: message.toString('ascii')
+            };
+            mailgun.messages().sendMime(dataToSend, (err, body) => {
+              if (err) {
+                return reject(err);
+              }
+              resolve(body);
+            });
+          })
+        }
+        catch (err) {
+            reject(err);
+        }
       });
     }else{
       var data = {
@@ -177,23 +183,26 @@ var SimpleMailgunAdapter = mailgunOptions => {
         html: mail.html
       });
       return new Promise((resolve, reject) => {
-      	mailC.build((mailBuildError, message) => {
-          if(mailBuildError){
-            return reject(mailBuildError);
-          }
-          var dataToSend = {
-            to: mail.to,
-            message: message.toString('ascii')
-          };
-          mailgun.messages().sendMime(dataToSend, (err, body) => {
-            if (err) {
-              return reject(err);
+        try {
+          mailC.build((mailBuildError, message) => {
+            if(mailBuildError){
+              return reject(mailBuildError);
             }
-            resolve(body);
-          });
-        }).catch(err => {
+            var dataToSend = {
+              to: mail.to,
+              message: message.toString('ascii')
+            };
+            mailgun.messages().sendMime(dataToSend, (err, body) => {
+              if (err) {
+                return reject(err);
+              }
+              resolve(body);
+            });
+          })
+        }
+        catch (err) {
           reject(err);
-        });
+        }
       });
     }else{
       var data = {
