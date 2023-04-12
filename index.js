@@ -54,6 +54,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.verificationSubject, options),
@@ -90,6 +95,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.verificationSubject, options),
@@ -115,6 +125,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.passwordResetSubject, options),
@@ -151,6 +166,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: getRecipient(options.user),
         subject: fillVariables(mailgunOptions.passwordResetSubject, options),
@@ -176,6 +196,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: mail.to,
         subject: mail.subject,
@@ -212,6 +237,11 @@ var SimpleMailgunAdapter = mailgunOptions => {
             options.appName,
           address: mailgunOptions.fromAddress
         },
+        headers: [
+          { 
+            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc?subject=Unsubscribe:>" + getRecipient(options.user)
+          }
+        ],
         sender: mailgunOptions.fromAddress,
         to: mail.to,
         subject: mail.subject,
