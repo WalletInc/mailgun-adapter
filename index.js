@@ -56,7 +56,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
@@ -97,7 +97,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
@@ -127,7 +127,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
@@ -168,7 +168,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
@@ -198,7 +198,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
@@ -239,7 +239,7 @@ var SimpleMailgunAdapter = mailgunOptions => {
         },
         headers: [
           { 
-            "List-Unsubscribe": "<mailto:unsubscribe@wallet.inc>"
+            "List-Unsubscribe": "<https://wall.et/login>"
           }
         ],
         sender: mailgunOptions.fromAddress,
